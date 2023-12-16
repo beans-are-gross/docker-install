@@ -26,7 +26,16 @@ sudo usermod -aG docker $USER
 
 # Docker Container Controllers
 
-## Portainer Standalone
+## Dockge (great for beginners)
+```terminal
+apt update && apt install curl
+mkdir -p /opt/stacks /opt/dockge
+cd /opt/dockge
+curl "https://dockge.kuma.pet/compose.yaml?port=5001&stacksPath=%2Fopt%2Fstacks" --output compose.yaml
+docker compose up -d
+```
+
+## Portainer (great for more info)
 ```terminal
 docker volume create portainer_data
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
