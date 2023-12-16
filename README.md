@@ -2,6 +2,8 @@
 
 [This, but simple](https://docs.docker.com/engine/install/ubuntu/)
 
+## Docker Install
+
 ```terminal
 sudo apt-get update && apt-get install ca-certificates curl gnupg lsb-release -y
 sudo mkdir -p /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
