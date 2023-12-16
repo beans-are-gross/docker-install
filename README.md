@@ -24,9 +24,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo usermod -aG docker $USER
 ```
 
-## Docker Container Controllers
+# Docker Container Controllers
 
-### Portainer Standalone
+## Portainer Standalone
 ```terminal
 docker volume create portainer_data
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
@@ -37,12 +37,12 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /va
 > docker container restart portainer
 > ```
 
-### Portainer Agent
+## Portainer Agent
 ```terminal
 docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.16.2
 ```
 
-### Yacht
+## Yacht
 ```terminal
 docker volume create yacht
 docker run -d -p 8001:8000 --name yacht --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v yacht:/config selfhostedpro/yacht 
