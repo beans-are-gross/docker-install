@@ -30,7 +30,7 @@ sudo usermod -aG docker $USER
 
 ## Dockge (great for beginners)
 ```terminal
-apt update && apt install curl
+sudo apt update && sudo apt install curl
 mkdir -p /opt/stacks /opt/dockge
 cd /opt/dockge
 curl "https://dockge.kuma.pet/compose.yaml?port=5001&stacksPath=%2Fopt%2Fstacks" --output compose.yaml
